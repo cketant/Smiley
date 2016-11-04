@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
@@ -14,7 +14,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" misplaced="YES" id="RM2-IR-Oab">
+                            <view tag="100" contentMode="scaleToFill" misplaced="YES" id="RM2-IR-Oab">
                                 <frame key="frameInset" minY="396" width="375" height="271"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
@@ -82,14 +82,14 @@
                     </view>
                     <connections>
                         <outlet property="parentView" destination="8bC-Xf-vdC" id="0hj-YT-nNs"/>
+                        <outlet property="trayArrowImageView" destination="ohO-N5-8cg" id="CRB-aj-XAv"/>
                         <outlet property="trayView" destination="RM2-IR-Oab" id="WOD-kc-7sw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="TC7-ff-MPv" userLabel="trayViewGesture">
                     <connections>
-                        <action selector="onPan:" destination="BYZ-38-t0r" id="uhu-0o-UUz"/>
-                        <outlet property="delegate" destination="BYZ-38-t0r" id="oaP-iW-p4S"/>
+                        <action selector="onTrayPan:" destination="BYZ-38-t0r" id="W2c-MJ-wb5"/>
                     </connections>
                 </panGestureRecognizer>
                 <panGestureRecognizer minimumNumberOfTouches="1" id="RDJ-9s-RLM">
